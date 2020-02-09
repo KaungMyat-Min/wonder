@@ -13,9 +13,11 @@ import io.reactivex.Observable
 @Dao
 interface WonderDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-   fun insertAll(wonders:List<Wonder>)
+    suspend fun insertAll(wonders: List<Wonder>)
 
     @Query("SELECT * FROM wonders")
-    @UiThread
     fun getAll(): Observable<List<Wonder>>
+
+    @Query("DELETE FROM wonders")
+    suspend fun deleteAll()
 }

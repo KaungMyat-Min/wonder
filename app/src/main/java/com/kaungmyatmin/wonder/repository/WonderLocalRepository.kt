@@ -17,4 +17,8 @@ class WonderLocalRepository @Inject constructor(val wonderDao: WonderDao) {
     suspend fun insertAll(wonders: List<Wonder>) {
         wonderDao.insertAll(wonders)
     }
+
+    suspend fun deleteAll() {
+        wonderDao.deleteAll()
+    }
 }

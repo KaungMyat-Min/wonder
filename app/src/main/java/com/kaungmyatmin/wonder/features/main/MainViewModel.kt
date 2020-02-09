@@ -35,8 +35,10 @@ class MainViewModel
                     response?.let {
                         wonders.postValue(it)
                         GlobalScope.launch(Dispatchers.IO) {
-                            wonderLocalRepository.insertAll(it)
+                            //wonderLocalRepository.insertAll(it)
+                            wonderLocalRepository.deleteAll()
                         }
+
 
                     }
 
