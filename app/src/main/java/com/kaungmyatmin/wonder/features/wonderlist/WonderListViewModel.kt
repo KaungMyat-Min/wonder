@@ -47,7 +47,7 @@ class WonderListViewModel @Inject constructor(
                     response?.wonders?.let {
                         wonders.postValue(it)
                         GlobalScope.launch(Dispatchers.IO) {
-                            wonderLocalRepository.deleteAll()
+                            wonderLocalRepository.updateOrDelete()
                             wonderLocalRepository.insertAll(it)
                         }
 

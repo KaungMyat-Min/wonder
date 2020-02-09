@@ -4,10 +4,7 @@ package com.kaungmyatmin.wonder.features.main
 import com.kaungmyatmin.wonder.utli.ViewModelProviderFactory
 
 /**
- * Provides app-level dependencies to various BaseFragments:
- * 1) BaseBlogFragment
- * 2) BaseCreateBlogFragment
- * 3) BaseAccountFragment
+ * Provides app-level dependencies to various BaseFragments
  *
  * Must do this because of process death issue and restoring state.
  * Why?

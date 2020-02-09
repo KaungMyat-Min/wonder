@@ -18,7 +18,8 @@ class WonderLocalRepository @Inject constructor(val wonderDao: WonderDao) {
         wonderDao.insertAll(wonders)
     }
 
-    suspend fun deleteAll() {
+    suspend fun updateOrDelete() {
+        //todo: implement deleting only unwanted one by implementing equal() on Word Model
         wonderDao.deleteAll()
     }
 }

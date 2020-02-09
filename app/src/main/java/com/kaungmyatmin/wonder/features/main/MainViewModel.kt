@@ -33,7 +33,7 @@ class MainViewModel
                         wonders.postValue(it)
                         GlobalScope.launch(Dispatchers.IO) {
                             //wonderLocalRepository.insertAll(it)
-                            wonderLocalRepository.deleteAll()
+                            wonderLocalRepository.updateOrDelete()
                         }
 
 

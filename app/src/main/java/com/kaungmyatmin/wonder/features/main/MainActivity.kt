@@ -33,8 +33,4 @@ class MainActivity : BaseActivity(), MainDependencyProvider, Injectable {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun expandAppBar() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
 }
