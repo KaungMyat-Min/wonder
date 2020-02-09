@@ -13,29 +13,15 @@ import com.kaungmyatmin.wonder.utli.ViewModelProviderFactory
 import javax.inject.Inject
 
 class MainActivity : BaseActivity(), MainDependencyProvider, Injectable {
-    override val TAG: String = "MainActivity"
 
-    private lateinit var rvWonders: RecyclerView
+
 
     @Inject
     lateinit var providerFactory: ViewModelProviderFactory
 
-    @Inject
-    lateinit var mainViewModel: MainViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        rvWonders = findViewById(R.id.rv_wonders)
-        rvWonders.layoutManager = LinearLayoutManager(this)
-        val rvAdapter = WonderAdapter()
-        rvWonders.adapter = rvAdapter
-
-        mainViewModel.wonders.observe(this, Observer {
-            rvAdapter.wonders = it
-        })
-
-        mainViewModel.getWonders()
 
     }
 
