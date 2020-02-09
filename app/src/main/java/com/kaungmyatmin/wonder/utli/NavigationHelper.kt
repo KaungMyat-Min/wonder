@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.kaungmyatmin.wonder.R
-import com.kaungmyatmin.wonder.models.Wonder
-import javax.inject.Inject
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 
 class NavigationHelper constructor(val activity: Activity) {
     fun toWonderDetail(wonder: Wonder) {

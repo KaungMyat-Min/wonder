@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.di
+package com.kaungmyatmin.wonder.di.application
 
 import android.app.Application
 import android.content.Context
@@ -6,7 +6,7 @@ import android.content.SharedPreferences
 import androidx.room.Room
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.kaungmyatmin.wonder.local.AppDatabase
+import com.kaungmyatmin.wonder.features.main.data.local.AppDatabase
 import com.kaungmyatmin.wonder.utli.Constants
 import com.kaungmyatmin.wonder.utli.PreferenceKeys
 import dagger.Module

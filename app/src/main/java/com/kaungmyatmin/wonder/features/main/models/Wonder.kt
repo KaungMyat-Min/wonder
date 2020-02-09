@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.models
+package com.kaungmyatmin.wonder.features.main.models
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

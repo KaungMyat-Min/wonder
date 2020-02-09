@@ -1,11 +1,9 @@
-package com.kaungmyatmin.wonder.repository
+package com.kaungmyatmin.wonder.features.main.data.repository
 
 
-import com.kaungmyatmin.wonder.local.WonderDao
-import com.kaungmyatmin.wonder.models.Wonder
-import io.reactivex.Flowable
+import com.kaungmyatmin.wonder.features.main.data.local.WonderDao
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 import io.reactivex.Observable
-import org.intellij.lang.annotations.Flow
 import javax.inject.Inject
 
 

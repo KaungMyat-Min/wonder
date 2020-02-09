@@ -1,9 +1,8 @@
-package com.kaungmyatmin.wonder.api
+package com.kaungmyatmin.wonder.features.main.data.remote
 
 
-import com.kaungmyatmin.wonder.models.responses.SchemaWonders
+import com.kaungmyatmin.wonder.features.main.models.responses.SchemaWonders
 import io.reactivex.Observable
-import io.reactivex.Single
 import retrofit2.http.GET
 
 interface MainApiService {

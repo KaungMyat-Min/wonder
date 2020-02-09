@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.features.detail
+package com.kaungmyatmin.wonder.features.main.ui.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.kaungmyatmin.wonder.R
 import com.kaungmyatmin.wonder.bases.BaseFragment
-import com.kaungmyatmin.wonder.models.Wonder
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 import com.kaungmyatmin.wonder.utli.loadImage
 
 class WonderDetailFragment : BaseFragment() {

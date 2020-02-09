@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.features.wonderlist
+package com.kaungmyatmin.wonder.features.main.ui.wonderlist
 
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kaungmyatmin.wonder.R
 import com.kaungmyatmin.wonder.bases.BaseFragment
-import com.kaungmyatmin.wonder.features.main.WonderAdapter
 import javax.inject.Inject
 
 class WonderListFragment : BaseFragment() {
@@ -22,7 +21,7 @@ class WonderListFragment : BaseFragment() {
     lateinit var wonderListViewModel: WonderListViewModel
 
     @Inject
-    lateinit var rvAdapter:WonderAdapter
+    lateinit var rvAdapter: WonderAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

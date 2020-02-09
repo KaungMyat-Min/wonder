@@ -1,15 +1,13 @@
-package com.kaungmyatmin.wonder.features.main
+package com.kaungmyatmin.wonder.features.main.ui.wonderlist
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.kaungmyatmin.wonder.R
-import com.kaungmyatmin.wonder.models.Wonder
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 import com.kaungmyatmin.wonder.utli.NavigationHelper
 import com.kaungmyatmin.wonder.utli.loadImage
 import javax.inject.Inject
@@ -18,6 +16,7 @@ class WonderAdapter @Inject constructor(val navigationHelper: NavigationHelper) 
     var wonders: List<Wonder>? = null
         set(value) {
             field = value
+            //todo: never use notifyDataSetChange, change this method by implementing DiffUtil
             notifyDataSetChanged()
 
         }
@@ -26,7 +25,9 @@ class WonderAdapter @Inject constructor(val navigationHelper: NavigationHelper) 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context);
         val view = inflater.inflate(R.layout.item_wonder, parent, false)
-        return MyViewHolder(view)
+        return MyViewHolder(
+            view
+        )
     }
 
     override fun getItemCount() = wonders?.size ?: 0

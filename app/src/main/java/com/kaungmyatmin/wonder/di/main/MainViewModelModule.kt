@@ -1,9 +1,9 @@
 package com.kaungmyatmin.wonder.di.main
 
 import androidx.lifecycle.ViewModel
-import com.kaungmyatmin.wonder.di.ViewModelKey
-import com.kaungmyatmin.wonder.features.main.MainViewModel
-import com.kaungmyatmin.wonder.features.wonderlist.WonderListViewModel
+import com.kaungmyatmin.wonder.di.application.ViewModelKey
+import com.kaungmyatmin.wonder.features.main.ui.MainViewModel
+import com.kaungmyatmin.wonder.features.main.ui.wonderlist.WonderListViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

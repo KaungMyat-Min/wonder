@@ -1,17 +1,16 @@
 package com.kaungmyatmin.wonder.bases
 
 import android.content.Context
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.kaungmyatmin.wonder.di.Injectable
-import com.kaungmyatmin.wonder.features.main.MainDependencyProvider
+import com.kaungmyatmin.wonder.di.HasViewModel
 
 
 
 open abstract class BaseFragment : Fragment(),Injectable {
 
-    lateinit var dependencyProvider: MainDependencyProvider
+    lateinit var dependencyProvider: HasViewModel
 
     abstract fun bindView(view:View)
     abstract fun setObservers()
@@ -19,7 +18,7 @@ open abstract class BaseFragment : Fragment(),Injectable {
     override fun onAttach(context: Context) {
         super.onAttach(context)
           try{
-            dependencyProvider = context as MainDependencyProvider
+            dependencyProvider = context as HasViewModel
         }catch(e: ClassCastException){
 
         }

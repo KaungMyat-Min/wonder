@@ -1,18 +1,15 @@
-package com.kaungmyatmin.wonder.features.main
+package com.kaungmyatmin.wonder.features.main.ui
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.kaungmyatmin.wonder.R
 import com.kaungmyatmin.wonder.bases.BaseActivity
 import com.kaungmyatmin.wonder.di.Injectable
+import com.kaungmyatmin.wonder.di.HasViewModel
 import com.kaungmyatmin.wonder.utli.ViewModelProviderFactory
 import javax.inject.Inject
 
-class MainActivity : BaseActivity(), MainDependencyProvider, Injectable {
+class MainActivity : BaseActivity(),
+    HasViewModel, Injectable {
 
 
 

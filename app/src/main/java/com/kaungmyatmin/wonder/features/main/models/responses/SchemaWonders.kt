@@ -1,8 +1,8 @@
-package com.kaungmyatmin.wonder.models.responses
+package com.kaungmyatmin.wonder.features.main.models.responses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.kaungmyatmin.wonder.models.Wonder
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 
  class SchemaWonders{
      @SerializedName("wonders")

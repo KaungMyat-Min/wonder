@@ -3,7 +3,7 @@ package com.kaungmyatmin.wonder
 import android.app.Activity
 import android.app.Application
 import com.facebook.stetho.Stetho
-import com.kaungmyatmin.wonder.di.AppInjector
+import com.kaungmyatmin.wonder.di.application.AppInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject

@@ -1,12 +1,10 @@
-package com.kaungmyatmin.wonder.local
+package com.kaungmyatmin.wonder.features.main.data.local
 
-import androidx.annotation.UiThread
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.kaungmyatmin.wonder.models.Wonder
-import io.reactivex.Flowable
+import com.kaungmyatmin.wonder.features.main.models.Wonder
 import io.reactivex.Observable
 
 

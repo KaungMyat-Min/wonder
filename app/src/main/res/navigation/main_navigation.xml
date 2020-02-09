@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/dest_wonderListFragment"
-        android:name="com.kaungmyatmin.wonder.features.wonderlist.WonderListFragment"
+        android:name="com.kaungmyatmin.wonder.features.main.ui.wonderlist.WonderListFragment"
         tools:layout="@layout/fragment_wonder_list"
         android:label="WonderListFragment" >
         <action
@@ -15,6 +15,6 @@
     </fragment>
     <fragment
         android:id="@+id/dest_wonderDetailFragment"
-        android:name="com.kaungmyatmin.wonder.features.detail.WonderDetailFragment"
+        android:name="com.kaungmyatmin.wonder.features.main.ui.detail.WonderDetailFragment"
         android:label="WonderDetailFragment" />
 </navigation>

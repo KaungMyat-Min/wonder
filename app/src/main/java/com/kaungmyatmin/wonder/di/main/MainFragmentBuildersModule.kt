@@ -1,8 +1,8 @@
 package com.kaungmyatmin.wonder.di.main
 
 
-import com.kaungmyatmin.wonder.features.detail.WonderDetailFragment
-import com.kaungmyatmin.wonder.features.wonderlist.WonderListFragment
+import com.kaungmyatmin.wonder.features.main.ui.detail.WonderDetailFragment
+import com.kaungmyatmin.wonder.features.main.ui.wonderlist.WonderListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

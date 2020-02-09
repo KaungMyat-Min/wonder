@@ -1,10 +1,8 @@
-package com.kaungmyatmin.wonder.repository
+package com.kaungmyatmin.wonder.features.main.data.repository
 
-import com.kaungmyatmin.wonder.api.MainApiService
-import com.kaungmyatmin.wonder.models.Wonder
-import com.kaungmyatmin.wonder.models.responses.SchemaWonders
+import com.kaungmyatmin.wonder.features.main.data.remote.MainApiService
+import com.kaungmyatmin.wonder.features.main.models.responses.SchemaWonders
 import io.reactivex.Observable
-import io.reactivex.Single
 import javax.inject.Inject
 
 class WonderRemoteRepository

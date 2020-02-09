@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.di
+package com.kaungmyatmin.wonder.di.application
 
 import android.app.Activity
 import android.app.Application
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.kaungmyatmin.wonder.BaseApplication
+import com.kaungmyatmin.wonder.di.Injectable
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.HasSupportFragmentInjector
@@ -21,7 +22,9 @@ object AppInjector {
         app
             .registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
                 override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-                    handleActivity(activity)
+                    handleActivity(
+                        activity
+                    )
                 }
 
                 override fun onActivityStarted(activity: Activity) {

@@ -1,4 +1,4 @@
-package com.kaungmyatmin.wonder.di
+package com.kaungmyatmin.wonder.di.application
 
 import android.app.Application
 import com.kaungmyatmin.wonder.BaseApplication
