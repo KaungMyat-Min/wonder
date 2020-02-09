@@ -1,8 +1,10 @@
 package com.kaungmyatmin.wonder.di.main
 
 import com.kaungmyatmin.wonder.api.MainApiService
+import com.kaungmyatmin.wonder.features.main.MainActivity
 import com.kaungmyatmin.wonder.local.AppDatabase
 import com.kaungmyatmin.wonder.local.WonderDao
+import com.kaungmyatmin.wonder.utli.NavigationHelper
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -23,6 +25,13 @@ class MainModule {
     fun provideBlogPostDao(db: AppDatabase): WonderDao {
         return db.wonderDao()
     }
+
+    @MainScope
+    @Provides
+    fun provideNavigationHelper(activity: MainActivity):NavigationHelper {
+        return NavigationHelper(activity)
+    }
+
 
 
 }

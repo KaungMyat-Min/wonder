@@ -8,5 +8,13 @@
         android:id="@+id/dest_wonderListFragment"
         android:name="com.kaungmyatmin.wonder.features.wonderlist.WonderListFragment"
         tools:layout="@layout/fragment_wonder_list"
-        android:label="WonderListFragment" />
+        android:label="WonderListFragment" >
+        <action
+            android:id="@+id/action_dest_wonderListFragment_to_wonderDetailFragment"
+            app:destination="@id/dest_wonderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_wonderDetailFragment"
+        android:name="com.kaungmyatmin.wonder.features.detail.WonderDetailFragment"
+        android:label="WonderDetailFragment" />
 </navigation>

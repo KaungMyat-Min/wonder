@@ -15,11 +15,14 @@ import javax.inject.Inject
 
 class WonderListFragment : BaseFragment() {
 
-    private lateinit var rvAdapter:WonderAdapter
+
     private lateinit var rvWonders: RecyclerView
 
     @Inject
     lateinit var wonderListViewModel: WonderListViewModel
+
+    @Inject
+    lateinit var rvAdapter:WonderAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +44,6 @@ class WonderListFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_wonder_list, container, false)
         bindView(view)
         rvWonders.layoutManager = LinearLayoutManager(context)
-        rvAdapter = WonderAdapter()
         rvWonders.adapter = rvAdapter
         setObservers()
         return view
