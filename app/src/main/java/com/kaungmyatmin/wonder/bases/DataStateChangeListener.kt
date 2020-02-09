@@ -8,7 +8,5 @@ interface DataStateChangeListener{
 
     fun expandAppBar()
 
-    fun hideSoftKeyboard()
 
-    fun isStoragePermissionGranted(): Boolean
 }
