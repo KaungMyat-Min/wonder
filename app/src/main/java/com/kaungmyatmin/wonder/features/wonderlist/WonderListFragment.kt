@@ -1,6 +1,7 @@
 package com.kaungmyatmin.wonder.features.wonderlist
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,6 @@ class WonderListFragment : BaseFragment() {
 
     private lateinit var rvWonders: RecyclerView
 
-    @Inject
     lateinit var wonderListViewModel: WonderListViewModel
 
     @Inject
@@ -45,13 +45,13 @@ class WonderListFragment : BaseFragment() {
         bindView(view)
         rvWonders.layoutManager = LinearLayoutManager(context)
         rvWonders.adapter = rvAdapter
-        setObservers()
+
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        wonderListViewModel.getWonders()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        setObservers()
     }
 
     override fun bindView(view: View) {
@@ -59,7 +59,8 @@ class WonderListFragment : BaseFragment() {
     }
 
     override fun setObservers() {
-        wonderListViewModel.wonders.observe(this, Observer {
+        wonderListViewModel.wonders.observe(viewLifecycleOwner, Observer {
+            Log.d("wonderlist","observing")
             rvAdapter.wonders = it
         })
 

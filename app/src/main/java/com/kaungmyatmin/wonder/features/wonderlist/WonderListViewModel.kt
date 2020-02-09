@@ -22,7 +22,11 @@ class WonderListViewModel @Inject constructor(
     val wonders: MutableLiveData<List<Wonder>> = MutableLiveData()
     private val disposible: CompositeDisposable = CompositeDisposable()
 
+    init{
+        getWonders()
+    }
     fun getWonders() {
+        Log.d("wonderlist","fetching")
         disposible.add(
             wonderLocalRepository.getCachedWonder()
                 .subscribeOn(Schedulers.io())
@@ -52,7 +56,7 @@ class WonderListViewModel @Inject constructor(
 
                 },
                     { e ->
-                        Log.d("MainActivity", "on error")
+
 
                     })
         )
