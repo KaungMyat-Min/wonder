@@ -110,5 +110,7 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding:$rx_binding"
     implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:$rx_binding"
 
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
 
 }

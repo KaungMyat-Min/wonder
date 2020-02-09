@@ -2,6 +2,7 @@ package com.kaungmyatmin.wonder
 
 import android.app.Activity
 import android.app.Application
+import com.facebook.stetho.Stetho
 import com.kaungmyatmin.wonder.di.AppInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -15,6 +16,7 @@ class BaseApplication : Application(), HasActivityInjector{
     override fun onCreate() {
         super.onCreate()
         AppInjector.init(this)
+        Stetho.initializeWithDefaults(this)
     }
 
     override fun activityInjector() = dispatchingAndroidInjector;

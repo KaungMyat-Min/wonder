@@ -1,5 +1,6 @@
 package com.kaungmyatmin.wonder.local
 
+import androidx.annotation.UiThread
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -15,5 +16,6 @@ interface WonderDao {
    fun insertAll(wonders:List<Wonder>)
 
     @Query("SELECT * FROM wonders")
-    fun getAll(): Flowable<List<Wonder>>
+    @UiThread
+    fun getAll(): Observable<List<Wonder>>
 }

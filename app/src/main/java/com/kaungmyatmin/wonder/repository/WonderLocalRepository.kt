@@ -10,7 +10,11 @@ import javax.inject.Inject
 
 
 class WonderLocalRepository @Inject constructor(val wonderDao: WonderDao) {
-    fun getAllWonders():Flowable<List<Wonder>>{
-       return wonderDao.getAll()
+    fun getAllWonders(): Observable<List<Wonder>> {
+        return wonderDao.getAll()
+    }
+
+    suspend fun insertAll(wonders: List<Wonder>) {
+        wonderDao.insertAll(wonders)
     }
 }
