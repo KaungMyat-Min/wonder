@@ -8,5 +8,5 @@ import retrofit2.http.GET
 
 interface MainApiService {
     @GET("13g69v")
-    fun getWonders(): Single<SchemaWonders>
+    fun getWonders(): Observable<SchemaWonders>
 }

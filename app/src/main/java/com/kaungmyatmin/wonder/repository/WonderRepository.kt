@@ -9,7 +9,7 @@ import javax.inject.Inject
 class WonderRepository
 @Inject
 constructor(var apiServe: MainApiService) {
-    fun getWonders(): Single<SchemaWonders> {
+    fun getWonders(): Observable<SchemaWonders> {
         return apiServe.getWonders()
     }
 

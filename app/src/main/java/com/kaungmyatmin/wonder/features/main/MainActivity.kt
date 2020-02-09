@@ -12,8 +12,8 @@ import com.kaungmyatmin.wonder.di.Injectable
 import com.kaungmyatmin.wonder.utli.ViewModelProviderFactory
 import javax.inject.Inject
 
-class MainActivity : BaseActivity(),MainDependencyProvider,Injectable {
-    override val TAG:String = "MainActivity"
+class MainActivity : BaseActivity(), MainDependencyProvider, Injectable {
+    override val TAG: String = "MainActivity"
 
     private lateinit var rvWonders: RecyclerView
 
@@ -28,16 +28,14 @@ class MainActivity : BaseActivity(),MainDependencyProvider,Injectable {
         setContentView(R.layout.activity_main)
         rvWonders = findViewById(R.id.rv_wonders)
         rvWonders.layoutManager = LinearLayoutManager(this)
-        val rvAdapter =WonderAdapter()
+        val rvAdapter = WonderAdapter()
         rvWonders.adapter = rvAdapter
 
         mainViewModel.wonders.observe(this, Observer {
             rvAdapter.wonders = it
         })
 
-        if(savedInstanceState == null){
-            mainViewModel.getWonders()
-        }
+        mainViewModel.getWonders()
 
     }
 

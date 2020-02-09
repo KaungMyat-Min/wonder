@@ -3,8 +3,10 @@ package com.kaungmyatmin.wonder.di
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.room.Room
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.kaungmyatmin.wonder.local.AppDatabase
 import com.kaungmyatmin.wonder.utli.Constants
 import com.kaungmyatmin.wonder.utli.PreferenceKeys
 import dagger.Module
@@ -34,7 +36,7 @@ class AppModule {
     @Singleton
     @Provides
     fun provideGsonBuilder(): Gson {
-        return GsonBuilder().create()
+        return GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
     }
 
     @Singleton
@@ -44,5 +46,14 @@ class AppModule {
             .baseUrl(Constants.BASE_URL)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gsonBuilder))
+    }
+
+    @Singleton
+    @Provides
+    fun provideAppDb(app: Application): AppDatabase {
+        return Room
+            .databaseBuilder(app, AppDatabase::class.java, AppDatabase.DATABASE_NAME)
+            .fallbackToDestructiveMigration() // get correct db version if schema changed
+            .build()
     }
 }
