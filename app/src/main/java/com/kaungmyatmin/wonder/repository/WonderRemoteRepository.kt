@@ -7,11 +7,12 @@ import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
-class WonderRepository
+class WonderRemoteRepository
 @Inject
 constructor(var apiServe: MainApiService) {
-    fun getWonders(): Observable<SchemaWonders> {
+    fun getLatestWonders(): Observable<SchemaWonders> {
         return apiServe.getWonders()
     }
+
 
 }
