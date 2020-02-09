@@ -14,7 +14,7 @@ abstract class BaseActivity: DaggerAppCompatActivity(),
     UICommunicationListener
 {
 
-    val TAG: String = "AppDebug"
+    open val TAG: String = "AppDebug"
 
 
 
